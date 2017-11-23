@@ -125,6 +125,7 @@ class List extends React.Component {
         list.push( <div key={id.toString()} className="row category">
             <h2>{EVENTS[i].category}</h2>
         </div>);
+        id++;
       }
       list.push(<div key = {id.toString()} className="row card">
               <div className="card-image col">
