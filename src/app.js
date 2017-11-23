@@ -154,6 +154,7 @@ class List extends React.Component {
               </div>
             </div>);
       lastCat = EVENTS[i].category;
+      id++;
     }
     return (
         <div className="wrapper">
