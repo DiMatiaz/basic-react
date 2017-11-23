@@ -115,17 +115,18 @@ class List extends React.Component {
   }
 
   render(){
-    let list = [<div className="row category">
+    let list = [<div key="1" className="row category">
                 <h2>{EVENTS[0].category}</h2>
             </div>];
     let lastCat = EVENTS[0].category;
+    let id = 2;
     for (let i=0; i<EVENTS.length;i++){
       if (EVENTS[i].category != lastCat){
-        list.push( <div className="row category">
+        list.push( <div key={id.toString()} className="row category">
             <h2>{EVENTS[i].category}</h2>
         </div>);
       }
-      list.push(<div className="row card">
+      list.push(<div key = {id.toString()} className="row card">
               <div className="card-image col">
                 <img src={EVENTS[i].img}/>
               </div>
